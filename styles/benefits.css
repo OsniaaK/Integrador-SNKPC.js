@@ -1,0 +1,118 @@
+#benefits {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    cursor: default;
+    width: 100%;
+
+    & > header {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        & > h2 {
+            text-transform: uppercase;
+            color: var(--snow);
+            font-size: 3rem;
+            position: relative;
+            transition: all 200ms ease-in-out;
+            font-family: var(--titleFont);
+            &::before {
+                position: absolute;
+                content: "";
+                width: 0;
+                height: 4px;
+                border-radius: 5px;
+                background-color: var(--alternative);
+                bottom: 5px;
+                transition: all 200ms ease-in-out;
+            }
+            &:hover::before {
+                width: 100%;
+                transition: all 200ms ease-in-out;
+            }
+        }
+    }
+    
+    & > article {
+        text-align: center;
+        width: calc(100% / 3 - 3rem);
+        height: 100%;
+        box-shadow: var(--alternative) 0px 0px 2px 4px;
+        display: flex;
+        flex-direction: column;
+        background-color: var(--snow);
+        border-radius: 50%;
+        color: var(--dark-base);
+        aspect-ratio: 1/1;
+        padding: 1rem 3rem;
+        overflow: hidden;
+        justify-content: center;
+        align-items: center;
+        & > h3{
+            text-shadow: var(--black) 1px 1px 2px;
+            text-transform: uppercase;
+            font-family: var(--titleFont);
+            font-size: 1.5rem;
+        }
+        & > p {
+            font-weight: 500;
+            color: var(--dark-base);
+            font-size: .9rem;
+            padding: .75rem;
+        }
+        & > picture {
+            height: 150px;
+            & img {
+                height: 100%;
+                width: 100%;
+                object-fit: contain;
+            }
+        }
+    }
+}
+
+@media (max-width:1024px){
+    #benefits {
+        flex-direction: column;
+        gap: 1rem;
+        & > article {
+            width: calc(100% - 2rem);
+            height: auto;
+            padding: 1rem;
+            & > picture {
+                height: 300px;
+            }
+            & > h3 {
+                font-size: 3rem;
+            }
+            & > p {
+                font-size: 1.3rem;
+                padding: .5rem 2.25rem;
+            }
+        }
+    }
+}
+
+@media (max-width:611px) {
+    #benefits {
+        flex-direction: column;
+        gap: 1rem;
+        & > article {
+            width: calc(100% - 2rem);
+            height: auto;
+            padding: 1rem;
+            & > picture {
+                height: 100px;
+            }
+            & > p {
+                font-size: 1.2rem;
+                padding: 0 2.25rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/base.css" />
+    <script type="module" src="main.js"></script>
+  </head>
+  <body>
+    <header id="header-main">
+      <nav id="desktop-menu">
+        <a href="#benefits">Ventajas</a>
+        <a href="#catalogo">Productos</a>
+        <a href="#portada" id="logoHeader-desktop"><img src="assets/White.webp" alt="logosnk" /></a>
+        <a href="#contacto">Contacto</a>
+        <a class="showcart">
+          <svg id="cart-desktop"
+          xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-shopping-cart"
+          >
+            <circle cx="8" cy="21" r="1" />
+            <circle cx="19" cy="21" r="1" />
+            <path
+              d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"
+            />
+          </svg>
+        </a>
+      </nav>
+      <form id="container-menu">
+          <button type="button" id="showmenu">
+            <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-menu"
+            >
+            <line x1="4" x2="20" y1="12" y2="12" />
+            <line x1="4" x2="20" y1="6" y2="6" />
+            <line x1="4" x2="20" y1="18" y2="18" />
+          </svg>
+        </button>
+        <nav id="nav-mobile" class="unActive">
+          <a href="#benefits">Ventajas</a>
+          <a href="#catalogo">Productos</a>
+          <a href="#contacto">Contacto</a>
+        </nav>
+        <a href="#portada" id="logoHeader-mobile"><img src="assets/White.webp" alt="logosnk" /></a>
+        <button type="button" class="showcart">
+          <svg
+          xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-shopping-cart"
+          >
+            <circle cx="8" cy="21" r="1" />
+            <circle cx="19" cy="21" r="1" />
+            <path
+              d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"
+            />
+          </svg>
+        </button>
+      </form>
+      <section id="cart-card" class="unActive">
+        <header>
+          <h2>Carrito</h2>
+          <span id="countItems"></span>
+        </header>
+        <ul id="items"></ul>
+        <form>
+          <fieldset><label for="totalCart">Total: </label><output id="totalCart">$100</output></fieldset>
+          <fieldset><button type="button" id="btnCheckout">COMPRAR</button></fieldset>
+          <small id="cartEmpty" class="notShow">Debes agregar productos al Carrito.</small>
+        </form>
+      </section>
+    </header>
+    <main id="portada">
+      <article>
+        <picture>
+          <img src="assets/Full.webp" alt="logo-hero">
+        </picture>
+          <p>Bendemos componentes, los escribimos mal, pero los vendemos bien.</p>
+        <nav>
+          <a href="#catalogo">Ver Productos</a>
+          <a href="#contacto">Conocenos</a>
+        </nav>
+      </article>
+      <picture>
+        <img src="assets/Hero.webp" alt="img-hero">
+      </picture>
+    </main>
+    <section id="benefits">
+      <header>
+        <h2>VENTAJAS</h1>
+      </header>
+      <article>
+        <picture>
+          <img src="assets/Security.webp" alt="">
+        </picture>
+        <h3>SEGURIDAD</h1>
+        <p>Protección garantizada para tus compras y datos personales.</p>
+      </article>
+      <article>
+        <picture>
+          <img src="assets/Engenier.webp" alt="">
+        </picture>
+        <h3>SERVICIO TECNICO</h1>
+        <p>Soporte experto para resolver problemas con tus productos.</p>
+      </article>
+      <article>
+        <picture>
+          <img src="assets/Drone.webp" alt="">
+        </picture>
+        <h3>LOGISTICA</h1>
+        <p>Entrega rápida y eficiente de tus pedidos a tu puerta.</p>
+      </article>
+    </section>
+    <section id="catalogo">
+      <header>
+        <h1>Productos</h1>
+      </header>
+      <ul id="categories">
+        <li data-categoria="todas">Mostrar Todo</li>
+        <li data-categoria="pc-armada"><img src="assets/pc.webp" alt="PC-Armada"><span>PC's Armadas</span></li>
+        <li data-categoria="gpu"><img src="assets/gpu.webp" alt="GPU"><span>Placas de Video</span></li>
+        <li data-categoria="hdd"><img src="assets/hdd.webp" alt="HDD"><span>Discos Duros</span></li>
+        <li data-categoria="ram"><img src="assets/ram.webp" alt="RAM"><span>Memorias RAM</span></li>
+        <li data-categoria="mouse"><img src="assets/mouse.webp" alt="MOUSE"><span>Mouses</span></li>
+        <li data-categoria="monitores"><img src="assets/Desktop.webp" alt="DESKTOP"><span>Monitores</span></li>
+      </ul>
+      <form action="" id="filters-category">
+        <select name="">
+          <option value="todas">Mostrar Todo</option>
+          <option value="pc-armada">PC's Armadas</option>
+          <option value="gpu">Placas de Video</option>
+          <option value="hdd">Discos Duros</option>
+          <option value="ram">Memorias RAM</option>
+          <option value="mouse">Mouses</option>
+          <option value="monitores">Monitores</option>
+        </select>
+      </form>
+      <ul id="productos"></ul>
+    </section>
+    <section id="contacto">
+      <aside>
+      <h2>Contacto</h2>
+      <nav id="contact-list">
+          <a href="#" class="contactMedias">Facebook</a>
+          <a href="#" class="contactMedias">Instagram</a>
+          <a href="#" class="contactMedias">WhatsApp</a>
+      </nav>
+    </aside>
+      <iframe id="iframecontact"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d46486.96406139752!2d-65.35424953043642!3d-43.263256503198356!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xbe0144b6cf6769bb%3A0x9cbd6c76af132e0d!2sTrelew%2C%20Chubut!5e0!3m2!1ses!2sar!4v1728141362626!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+    </section>
+    <footer>
+      <nav>
+        <a href="" class="hrefFooter">Trabaja con Nosotros</a>
+        <a href="" class="hrefFooter">Conoce nuestros eventos</a>
+        <a href="" class="hrefFooter">Terminos y Condiciones</a>
+      </nav>
+      <ul>
+        <li>Numero de contacto: <span>+54 123 456 789</span></li>
+        <li>Email: <span>snkpc@support.ar</span></li>
+        <li>Horarios de Atencion: <span>08:00 a 21:00</span></li>
+      </ul>
+    </footer>
+  </body>
+</html>

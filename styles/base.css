@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url(header.css);
+@import url(hero.css);
+@import url(benefits.css);
+@import url(catalogo.css);
+@import url(contacto.css);
+@import url(itemsCarrito.css);
+@import url(footer.css);
+
+:root {
+    --base: #673ab7;
+    --dark-base: #211264;
+    --light-base: #9c27b0;
+    --alternative: #d81b60;
+    --dark-alternative: #880e4f;
+    --light-alternative: #c51162;
+    --snow:snow;
+    --black: black;
+    --titleFont: "Kanit";
+    --bodyFont: "Montserrat";
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+html {
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+}
+
+::selection {
+ background-color: var(--base);
+ color: var(--snow);
+}
+
+.active {
+  display: flex;
+  transform: translateX(0);
+}
+
+.unActive {
+  display: flex;
+  transform: translateX(100vh);
+}
+
+.notShow {
+  display: none;
+}
+
+body {
+  background-color: var(--dark-base);
+  width: 100%;
+  color: var(--snow);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--bodyFont);
+  &.overlay {
+    &::before {
+        content: "";
+        position: fixed;
+        background-color: #311b924b;
+        top: 50px;
+        left: 0;
+        width: 100vw;
+        height: calc(100vh - 50px);
+        backdrop-filter: blur(4px);
+        z-index: 5;
+    }
+  }
+}

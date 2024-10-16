@@ -46,6 +46,7 @@ html {
 .unActive {
   display: flex;
   transform: translateX(100vh);
+  transition: all 250ms ease-in-out;
 }
 
 .notShow {

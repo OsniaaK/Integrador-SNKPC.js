@@ -3,6 +3,7 @@
     justify-content: flex-start;
     align-items: center;
     gap: .6rem;
+    transition: all 250ms ease-in-out;
     & > header {
         text-align: center;
         display: flex;
